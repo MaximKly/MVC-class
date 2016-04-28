@@ -1,0 +1,20 @@
+﻿@*@model LearningASPMVC.Models.Student 
+           @*indicates that this page recives one object of student class*@
+
+@model IEnumerable<LearningASPMVC.Models.Student>
+            @*indicates that this page recives collections of objects of student class*@
+
+@*@model LearningASPMVC.ViewModels.CourseStudents*@
+
+@{
+    ViewBag.Title = "Abc";
+}
+
+<h2>This is Abc.cshtml under Views/Xyx folder</h2>
+@*<h2>Course Name: @Model.course.CourseName
+</h2>*@
+
+@foreach (var item in Model) 
+{ 
+<H3>Student's name: @item.FirstName @item.LastName</H3>
+}
